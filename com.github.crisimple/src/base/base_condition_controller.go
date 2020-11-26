@@ -155,12 +155,12 @@ forloop:
 	}
 }
 
-func main() {
-	//conditionIfElse()
-	//conditionFor()
-	//conditionSwitchCase()
-	//conditionGoto()
-	//conditionGoto2()
-	//conditionBreak()
-	conditionContinue()
-}
+//func main() {
+//	//conditionIfElse()
+//	//conditionFor()
+//	//conditionSwitchCase()
+//	//conditionGoto()
+//	//conditionGoto2()
+//	//conditionBreak()
+//	conditionContinue()
+//}
