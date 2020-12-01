@@ -192,7 +192,50 @@ func sectionAssignmentCopy()  {
 
 }
 
-func main()  {
+
+// 切片的遍历
+func sectionForRange()  {
+	s := []int{1, 3, 5}
+	for i :=0; i < len(s); i++{
+		fmt.Printf("i:%v\n s[i]:%v\n", i, s[i])
+	}
+
+	// for...range
+	for index, value := range s {
+		fmt.Println(index, value)
+	}
+}
+
+
+// 切片的增加
+func sectionCrud()  {
+
+	// append()
+	var numSlice []int
+	var otherSlice = []int{1, 2, 3}
+	for i := 0; i < 10; i++ {
+		numSlice = append(numSlice, i)
+		fmt.Printf("%v --- %d --- %d --- ptr:%p\n", numSlice, len(numSlice), cap(numSlice), numSlice)
+	}
+	numSlice = append(numSlice, otherSlice...)
+	fmt.Printf("%v\n", numSlice)
+
+
+	// 切片的扩容
+	// $GOROOT/src/runtime/slice.go
+}
+
+// 切片的删除
+func sectionDelete()  {
+	s := []int{1, 2, 3, 4, 5, 6, 7}
+	// 删除元素4
+	s = append(s[:3], s[4:]...)
+	fmt.Printf("%v\n", s)
+}
+
+
+
+//func main()  {
 	//initArray1()
 	//initArray2()
 	//initArray3()
@@ -211,5 +254,11 @@ func main()  {
 	//SectionMake()
 
 	//sectionCompare()
-	sectionAssignmentCopy()
-}
+	//sectionAssignmentCopy()
+
+	//sectionForRange()
+
+	//sectionCrud()
+
+//	sectionDelete()
+//}
